@@ -1,0 +1,113 @@
+
+
+<html>
+ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+
+<style type="text/css">
+body{
+background-color: #f2f2f2;
+font-family: Arial, sans-serif;
+background-image: url(https://img.freepik.com/free-photo/pastel-blue-vignette-concrete-textured-background_53876-102637.jpg?w=900&t=st=1692765690~exp=1692766290~hmac=d92c6563ac1877b0bd4285aa8e0a39667535594200c9b3e8b5e441062a5a5ac2 );
+background-repeat: none;
+}
+h1{
+text-align: center;
+margin-top: 20px;
+color: #333;
+}
+.container{
+max-width: 900px;
+min-height: 40%;
+margin: 0 auto;
+padding: 5px;
+border-radius: 15px;
+box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+backdrop-filter: blur(10px);
+}
+.question{
+font-size: 24px;
+margin-bottom: 20px;
+color: #333; 
+text-align: center;
+}
+.options{
+margin-bottom: 20px;
+}
+.options label{
+display: block;
+margin-bottom: 10px;
+font-size: 18px;
+color: #333;
+}
+.options input[type="radio"]{
+margin-right: 10px;
+}
+.submit{
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+float: center;
+line-height: 10px;
+transition: all .3s ease;
+
+}
+.submit:hover{.submit:hover{
+background-color: #fff;
+color: #333;
+}
+.result{
+font-size: 24px;
+margin-bottom: 20px;
+color: #333; 
+text-align: center;
+background-color: #444;
+transform: scale(.97) translateY(-6%);
+
+}
+.result{
+font-size: 24px;
+margin-top: 20px;
+color: #333;
+}
+.correct{
+color: green;
+}
+.incorrect{
+color: red;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Quiz App</h1>
+<div class="container">
+<p class="question">This quiz is about Cricket</p>
+<ul><a href="q1.html" class="submit">Question 1</a></ul><br>
+<ul><a href="q2.html" class="submit">Question 2</a></ul><br>
+<ul><a href="q1.html" class="submit">Question 3</a></ul><br>
+    </div>
+<div class="result"></div>
+</div>
+
+<script type="text/javascript">
+function checkAnswer(){
+var answer = document.querySelector('input[name="capital"]:checked').value;
+var correctAnswer = "3";
+if(answer === correctAnswer){
+document.querySelector('.result').innerHTML = "Correct Answer! <span class='correct'>😃</span>";
+}else{
+document.querySelector('.result').innerHTML = "Incorrect Answer! <span class='incorrect'>😞</span>";
+}
+}
+</script>
+</body>
+
+</html>
